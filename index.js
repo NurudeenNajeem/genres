@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const genres = require('./routes/genres'); // Corrected the path
-// const Joi = require('joi');
 const app = express();
 
 mongoose.connect('mongodb://127.0.0.1:27017/vividly')
