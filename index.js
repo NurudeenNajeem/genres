@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const genres = require('./routes/genres'); // Corrected the path
+const customers = require('./routes/customers')
 const app = express();
 
 mongoose.connect('mongodb://127.0.0.1:27017/vividly')
@@ -9,6 +10,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/vividly')
 
 app.use(express.json());
 app.use('/api/genres', genres); // Corrected the route
+app.use('/api/customers', customers);
 
 
 const port = process.env.PORT || 3000;
